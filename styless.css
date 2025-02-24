@@ -1,0 +1,285 @@
+:root {
+    --turq-200: #a1e3f1;
+    --turq-300: #72d0eb;
+    --turq: #47b9e5;
+    --turq-500: #339ec8;
+    --turq-600: #287ea0;
+    --verdee-200: #d5f2d0;
+    --verdee-300: #b8e4b1;
+    --verdee: #8ddc89;
+    --verdee-500: #6bc065;
+    --verdee-600: #559e50;
+    --verdec-200: #d4f8dc;
+    --verdec-300: #aef0b7;
+    --verdec: #85e896;
+    --verdec-500: #61cc71;
+    --verdec-600: #4ca158;
+    --cinza-200: #f0f0f0;
+    --cinza-300: #d9d9d9;
+    --branco: #ffffff;
+    --cinza-500: #a3a3a3;
+    --cinza-600: #7a7a7a;
+}
+html, body {
+    height: 100%; /* Garante que o body ocupe toda a altura */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cinza-200);
+    color: var(--cinza-600);
+
+}
+
+header {
+    background-color: #003945;
+    padding: 10px;
+    text-align: center;
+    color: var(--branco);
+}
+
+.logo {
+    width: 50px;
+    margin-bottom: 5px;
+}
+
+.sicoobinho {
+    position: fixed;
+    bottom: 20px; /* Fixa o mascote a 20px do fundo  */
+    right: 20px;  /* Fixa o mascote a 20px do lado direito */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000; /* Garante que o mascote fique na frente do conteúdo */
+}
+
+.mascote {
+    width: 200px; /* Aumenta o tamanho do mascote */
+    height: auto; /* Mantém a proporção da imagem */
+    cursor: pointer; /* Cursor de mãozinha */
+}
+
+.balao {
+    background-color: #fff;
+    border: 2px solid #003945; /* Cor do balão */
+    border-radius: 10px;
+    padding: 10px;
+    color: #003945; /* Cor do texto */
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 10px; /* Espaço entre o balão e o mascote */
+    white-space: nowrap;
+    display: none; /* O balão começa oculto */
+}
+
+.sicoobinho:hover .balao {
+    display: block; /* Mostra o balão quando o mouse passa sobre o mascote */
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.container {
+    width: 100%; /* O container sempre vai ocupar 100% da largura da tela */
+    max-width: 1200px; /* Limita o tamanho máximo em telas grandes */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 10px; /* Adiciona um espaçamento interno */
+}
+.containerbaixo {
+    position: relative; /* Use relative ou absolute dependendo do contexto */
+    width: 100%; /* Certifique-se de que a largura se ajusta */
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 1200px;
+    height: 100px;
+}
+.containerform {
+    width: 100%; /* Ajuste para caber na tela */
+    margin: 0 auto;
+    padding: 60px;
+    max-width: 1200px;
+    background-image: url('fundo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: #ffffff;
+    flex: 1;
+}
+
+form {
+    background-color: var(--branco);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto; animation: fadeInUp 1.5s ease-out; /* Animação de entrada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--cinza-300);
+    border-radius: 5px;
+}
+
+button {
+    background-color: var(--verdee);
+    color: var(--branco);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+button:hover {
+    background-color: var(--verdee-500);
+}
+
+footer {
+    position: relative; /* Ou fixed se quiser que ele fique sempre visível */
+    bottom: 0;
+    width: 100%;
+    background-color: #003945;
+    padding: 20px;
+    color: var(--branco);
+    /*text-align: center;*/
+    clear: both;
+}
+
+footer p {
+    margin: 0;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efeito de hover no formulário */
+form:hover {
+    transform: translateY(-10px); /* Elevação ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+}
+
+@media (max-width: 1200px) {
+    .container, .containerform {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8em; /* Reduz o tamanho do título */
+    }
+
+    form {
+        max-width: 350px; /* Ajuste para telas menores */
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    .container, .containerform {
+        padding: 20px;
+    }
+
+    form {
+        max-width: 90%; /* Aumenta a largura do formulário em telas pequenas */
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    form {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 1em;
+    }
+    @media (max-width: 768px) {
+    .mascote {
+        width: 120px; /* Para tablets e telas intermediárias */
+    }
+}
+
+@media (max-width: 480px) {
+    .mascote {
+        width: 100px; /* Para celulares */
+    }
+}
+
+/* Cards responsivos */
+.cards {
+    width: 100%; /* Ajusta o tamanho dos cards para 100% da largura do container */
+    max-width: 200px; /* Limita o tamanho máximo */
+    height: auto; /* Mantém a proporção */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 20px; /* Adiciona espaço acima dos cards */
+
+    
+}
+
+/* Ajuste do h1 para dispositivos menores */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em; /* Ajusta o tamanho do título em tablets */
+    }
+
+   
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2em; /* Ajusta o tamanho do título em celulares */
+    }
+
+    .cards {
+        max-width: 200px; /* Para telas muito pequenas */
+    }
+}
+}

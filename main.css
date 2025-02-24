@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  place-items: center;
+  min-height: 90vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #eee;
+  transition: background-color 0.35s ease-in-out;
+}
+
+body {
+  background-image: url(img/33.png);
+  background-image: center;
+  background-size: 100vw 100vh;
+}
+
+.result {
+  color: rgb(255, 215, 0);
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.box {
+  position: relative;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.2rem;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #f7e2be;
+}
+
+.author {
+  font-weight: bold;
+  text-align: center;
+}
+
+#countdown {
+  font-size: 24px;
+  color: gold;
+  text-align: center;
+  margin-top: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-width: 200px;
+  height: auto;
+}
+
+.redes-sociais {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  text-align: center;
+}
+
+.redes-sociais h3 {
+  color: #2DD4BF;
+  margin-bottom: 17px;
+  font-size: 1.3rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-icon {
+  display: inline-block;
+}
+
+.social-icon img {
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover img {
+  transform: scale(1.1);
+}
+
+/* Ajuste para dispositivos móveis */
+@media (max-width: 600px) {
+  body {
+    min-height: 100vh;
+    padding: 0px;
+  }
+
+  .result {
+    font-size: 0.9rem;
+  }
+
+  button {
+    width: 30px;
+    font-size: 1rem;
+  }
+
+  .social-icons img {
+    width: 30px;
+    height: auto;
+  }
+}
+.butao1 {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+}
+
+.botao {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6ad56e;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #45a049;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.botao:active {
+  background-color: #3e5a8e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
